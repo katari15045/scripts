@@ -14,7 +14,7 @@ then
 	if [ "${CUR_STATUS}" == "Discharging" ]
 	then
 		export DISPLAY=:0
-		export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+		export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/${UID}/bus
 		notify-send "Battery Low, ${CUR_CAPACITY}%. Plug-in Charger Immediately"
 f
 	fi
